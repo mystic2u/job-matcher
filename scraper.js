@@ -142,7 +142,11 @@ async function main() {
   }
 
   for (const query of ADZUNA_QUERIES) {
-    results.push(...(await fetchAdzuna(query)));
+    try {
+      results.push(...(await fetchAdzuna(query)));
+    } catch (err) {
+      console.warn(`Adzuna query failed, skipping: "${query}" (${err.message})`);
+    }
   }
 
   const seen = new Set();
