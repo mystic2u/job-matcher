@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ResumeParser from "./components/ResumeParser.jsx";
 import JobMatcher from "./components/JobMatcher.jsx";
+import SavedJobs from "./components/SavedJobs.jsx";
 
 export default function App() {
   const [tab, setTab] = useState("match");
@@ -17,6 +18,14 @@ export default function App() {
           Match
         </button>
         <button
+          onClick={() => setTab("saved")}
+          className={`text-sm font-medium ${
+            tab === "saved" ? "text-amber-400" : "text-slate-500 hover:text-slate-300"
+          }`}
+        >
+          Saved
+        </button>
+        <button
           onClick={() => setTab("parse")}
           className={`text-sm font-medium ${
             tab === "parse" ? "text-amber-400" : "text-slate-500 hover:text-slate-300"
@@ -25,7 +34,7 @@ export default function App() {
           Extract
         </button>
       </nav>
-      {tab === "match" ? <JobMatcher /> : <ResumeParser />}
+      {tab === "match" ? <JobMatcher /> : tab === "saved" ? <SavedJobs /> : <ResumeParser />}
     </div>
   );
 }
