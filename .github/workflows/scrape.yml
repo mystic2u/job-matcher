@@ -1,0 +1,24 @@
+name: Scrape jobs
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install rss-parser
+      - run: node scraper.js
+        env:
+          ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
+          ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update jobs.json"
+          file_pattern: jobs.json
