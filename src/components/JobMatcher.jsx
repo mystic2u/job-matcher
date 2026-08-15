@@ -14,7 +14,7 @@ const MAX_JOBS_TO_SCORE = 80;
 const DECISIONS_KEY = "job-matcher-decisions";
 
 // Replace with your actual Worker URL once it's deployed
-const WORKER_URL = "https://job-matcher-proxy.YOUR-SUBDOMAIN.workers.dev";
+const WORKER_URL = "https://calm-field-818cjob-matcher-proxy.swaggz4life.workers.dev/";
 
 function truncate(str, n) {
   if (!str) return "";
