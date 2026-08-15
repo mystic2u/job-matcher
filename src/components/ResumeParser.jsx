@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Sparkles, Loader2, FileText, AlertCircle } from "lucide-react";
 
 // Replace with your actual Worker URL once it's deployed
-const WORKER_URL = "https://job-matcher-proxy.YOUR-SUBDOMAIN.workers.dev";
+const WORKER_URL = "https://calm-field-818cjob-matcher-proxy.swaggz4life.workers.dev/";
 
 function monthIndex(dateStr) {
   if (!dateStr || dateStr === "Present") {
