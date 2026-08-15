@@ -14,7 +14,7 @@ const MAX_JOBS_TO_SCORE = 80;
 const DECISIONS_KEY = "job-matcher-decisions";
 
 // Replace with your actual Worker URL once it's deployed
-const WORKER_URL = "https://calm-field-818cjob-matcher-proxy.swaggz4life.workers.dev/";
+const WORKER_URL = "https://job-matcher-proxy.YOUR-SUBDOMAIN.workers.dev";
 
 function truncate(str, n) {
   if (!str) return "";
@@ -29,6 +29,23 @@ function loadDecisions() {
   }
 }
 
+async function callWorker(content, maxTokens) {
+  const response = await fetch(WORKER_URL, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      model: "claude-sonnet-4-6",
+      max_tokens: maxTokens,
+      messages: [{ role: "user", content }],
+    }),
+  });
+  const data = await response.json();
+  const textBlock = (data.content || []).find((b) => b.type === "text");
+  if (!textBlock) throw new Error("No response");
+  const cleaned = textBlock.text.replace(/```json|```/g, "").trim();
+  return JSON.parse(cleaned);
+}
+
 export default function JobMatcher() {
   const [jobs, setJobs] = useState([]);
   const [jobsLoading, setJobsLoading] = useState(true);
@@ -38,7 +55,9 @@ export default function JobMatcher() {
   const [matches, setMatches] = useState(null);
   const [reviewIndex, setReviewIndex] = useState(0);
   const [matching, setMatching] = useState(false);
+  const [matchPhase, setMatchPhase] = useState(null); // "scoring" | "enriching"
   const [matchError, setMatchError] = useState(null);
+  const [exiting, setExiting] = useState(null); // null | "saved" | "rejected"
 
   const [decisions, setDecisions] = useState({});
 
@@ -63,19 +82,24 @@ export default function JobMatcher() {
   }, []);
 
   const recordDecision = (decision) => {
+    if (exiting) return;
     const current = matches && matches[reviewIndex];
     if (!current) return;
-    const updated = {
-      ...decisions,
-      [current.job.url]: {
-        decision,
-        title: current.job.title,
-        company: current.job.company,
-      },
-    };
-    setDecisions(updated);
-    localStorage.setItem(DECISIONS_KEY, JSON.stringify(updated));
-    setReviewIndex((i) => i + 1);
+    setExiting(decision);
+    setTimeout(() => {
+      const updated = {
+        ...decisions,
+        [current.job.url]: {
+          decision,
+          title: current.job.title,
+          company: current.job.company,
+        },
+      };
+      setDecisions(updated);
+      localStorage.setItem(DECISIONS_KEY, JSON.stringify(updated));
+      setReviewIndex((i) => i + 1);
+      setExiting(null);
+    }, 200);
   };
 
   useEffect(() => {
@@ -86,11 +110,12 @@ export default function JobMatcher() {
     }
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
-  }, [matches, reviewIndex, decisions]);
+  }, [matches, reviewIndex, decisions, exiting]);
 
   const handleMatch = async () => {
     if (!resumeText.trim() || jobs.length === 0) return;
     setMatching(true);
+    setMatchPhase("scoring");
     setMatchError(null);
     setMatches(null);
     setReviewIndex(0);
@@ -118,43 +143,60 @@ export default function JobMatcher() {
         feedback += `\n\nRoles this candidate has previously rejected, avoid similar ones:\n${rejectedList.join("\n")}`;
       }
 
-      const response = await fetch(WORKER_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          model: "claude-sonnet-4-6",
-          max_tokens: 1200,
-          messages: [
-            {
-              role: "user",
-              content:
-                'You match a candidate\'s resume against open job postings. Respond with ONLY a JSON object, no markdown fences, no preamble. Schema: {"matches": [{"index": number, "score": number, "reason": string}]}. Score is 0 to 100. Only include jobs that are a genuine fit, leave out weak matches rather than ranking everything, cap at 10 results, order by score descending.\n\nResume:\n' +
-                resumeText +
-                feedback +
-                "\n\nJob listings:\n" +
-                jobList,
-            },
-          ],
-        }),
-      });
-      const data = await response.json();
-      const textBlock = (data.content || []).find((b) => b.type === "text");
-      if (!textBlock) throw new Error("No response");
-      const cleaned = textBlock.text.replace(/```json|```/g, "").trim();
-      const parsed = JSON.parse(cleaned);
-      const resolved = (parsed.matches || [])
-        .map((m) => ({ ...m, job: scored[m.index] }))
+      const scorePayload = await callWorker(
+        'You match a candidate\'s resume against open job postings. Respond with ONLY a JSON object, no markdown fences, no preamble. Schema: {"matches": [{"index": number, "score": number, "reason": string}]}. Score is 0 to 100. Only include jobs that are a genuine fit, leave out weak matches rather than ranking everything, cap at 10 results, order by score descending.\n\nResume:\n' +
+          resumeText +
+          feedback +
+          "\n\nJob listings:\n" +
+          jobList,
+        1200
+      );
+
+      const resolved = (scorePayload.matches || [])
+        .map((m) => ({ ...m, job: scored[m.index], details: null }))
         .filter((m) => m.job);
-      setMatches(resolved);
+
+      if (resolved.length === 0) {
+        setMatches(resolved);
+        return;
+      }
+
+      setMatchPhase("enriching");
+      try {
+        const fullJobList = resolved
+          .map((m, i) => `${i}: ${m.job.title} @ ${m.job.company}\n${truncate(m.job.description, 2500)}`)
+          .join("\n\n");
+
+        const detailPayload = await callWorker(
+          'Extract structured details from each job posting below. Respond with ONLY a JSON object, no markdown fences, no preamble. Schema: {"jobs": [{"index": number, "salary": string or null, "responsibilities": string or null, "requirements": string or null, "start_date": string or null, "experience_required": string or null, "summary": string}]}. Use null for any field not mentioned in the posting text, do not guess or invent figures. Keep responsibilities and requirements each to 2 or 3 short sentences. Keep summary to one or two sentences.\n\nJob postings:\n' +
+            fullJobList,
+          3000
+        );
+
+        const detailsByIndex = {};
+        (detailPayload.jobs || []).forEach((d) => {
+          detailsByIndex[d.index] = d;
+        });
+
+        const enriched = resolved.map((m, i) => ({ ...m, details: detailsByIndex[i] || null }));
+        setMatches(enriched);
+      } catch (err) {
+        // Enrichment failing shouldn't lose the working match results
+        setMatches(resolved);
+      }
     } catch (err) {
       setMatchError("Could not score matches. Try again.");
     } finally {
       setMatching(false);
+      setMatchPhase(null);
     }
   };
 
   const current = matches && matches[reviewIndex];
   const savedCount = Object.values(decisions).filter((d) => d.decision === "saved").length;
+
+  const cardTransform =
+    exiting === "saved" ? "translate-x-full opacity-0" : exiting === "rejected" ? "-translate-x-full opacity-0" : "translate-x-0 opacity-100";
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 p-6 md:p-10">
@@ -190,7 +232,7 @@ export default function JobMatcher() {
             {matching ? (
               <>
                 <Loader2 className="w-4 h-4 animate-spin" />
-                Matching
+                {matchPhase === "enriching" ? "Adding details" : "Matching"}
               </>
             ) : (
               <>
@@ -218,7 +260,9 @@ export default function JobMatcher() {
             <p className="text-xs text-slate-500 mb-3">
               {reviewIndex + 1} of {matches.length}
             </p>
-            <div className="bg-slate-900 border border-slate-800 rounded-lg p-6">
+            <div
+              className={`bg-slate-900 border border-slate-800 rounded-lg p-6 transition-all duration-200 ${cardTransform}`}
+            >
               <div className="flex items-start justify-between gap-3">
                 <div>
                   <div className="flex items-center gap-2">
@@ -235,7 +279,53 @@ export default function JobMatcher() {
                   <span className="relative">{current.score}</span>
                 </span>
               </div>
-              <p className="text-sm text-slate-300 mt-4">{current.reason}</p>
+
+              {current.details?.summary && (
+                <p className="text-sm text-slate-300 mt-4">{current.details.summary}</p>
+              )}
+
+              {(current.details?.salary || current.details?.experience_required || current.details?.start_date) && (
+                <div className="grid grid-cols-3 gap-3 mt-4 pt-4 border-t border-slate-800">
+                  {current.details?.salary && (
+                    <div>
+                      <p className="text-[10px] text-slate-500 uppercase tracking-wide">Salary</p>
+                      <p className="text-xs text-slate-300 mt-0.5">{current.details.salary}</p>
+                    </div>
+                  )}
+                  {current.details?.experience_required && (
+                    <div>
+                      <p className="text-[10px] text-slate-500 uppercase tracking-wide">Experience</p>
+                      <p className="text-xs text-slate-300 mt-0.5">{current.details.experience_required}</p>
+                    </div>
+                  )}
+                  {current.details?.start_date && (
+                    <div>
+                      <p className="text-[10px] text-slate-500 uppercase tracking-wide">Start date</p>
+                      <p className="text-xs text-slate-300 mt-0.5">{current.details.start_date}</p>
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {current.details?.responsibilities && (
+                <div className="mt-4">
+                  <p className="text-[10px] text-slate-500 uppercase tracking-wide mb-1">Responsibilities</p>
+                  <p className="text-sm text-slate-300">{current.details.responsibilities}</p>
+                </div>
+              )}
+
+              {current.details?.requirements && (
+                <div className="mt-4">
+                  <p className="text-[10px] text-slate-500 uppercase tracking-wide mb-1">Requirements</p>
+                  <p className="text-sm text-slate-300">{current.details.requirements}</p>
+                </div>
+              )}
+
+              <div className="mt-4 pt-4 border-t border-slate-800">
+                <p className="text-[10px] text-slate-500 uppercase tracking-wide mb-1">Why it's a good fit</p>
+                <p className="text-sm text-slate-300">{current.reason}</p>
+              </div>
+
               <a
                 href={current.job.url}
                 target="_blank"
