@@ -1,5 +1,5 @@
-const fs = require("fs");
-const Parser = require("rss-parser");
+import fs from "fs";
+import Parser from "rss-parser";
 const parser = new Parser();
 
 // Add companies here as you find their slug. To find a slug, check the
