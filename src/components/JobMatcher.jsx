@@ -1,8 +1,17 @@
 import React, { useState, useEffect } from "react";
-import { Sparkles, Loader2, AlertCircle, Briefcase, ExternalLink } from "lucide-react";
+import {
+  Sparkles,
+  Loader2,
+  AlertCircle,
+  Briefcase,
+  ExternalLink,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
 
 const JOBS_URL = "https://raw.githubusercontent.com/mystic2u/job-matcher/main/jobs.json";
 const MAX_JOBS_TO_SCORE = 80;
+const DECISIONS_KEY = "job-matcher-decisions";
 
 // Replace with your actual Worker URL once it's deployed
 const WORKER_URL = "https://job-matcher-proxy.YOUR-SUBDOMAIN.workers.dev";
@@ -12,6 +21,14 @@ function truncate(str, n) {
   return str.length > n ? str.slice(0, n) + "..." : str;
 }
 
+function loadDecisions() {
+  try {
+    return JSON.parse(localStorage.getItem(DECISIONS_KEY) || "{}");
+  } catch {
+    return {};
+  }
+}
+
 export default function JobMatcher() {
   const [jobs, setJobs] = useState([]);
   const [jobsLoading, setJobsLoading] = useState(true);
@@ -19,8 +36,15 @@ export default function JobMatcher() {
 
   const [resumeText, setResumeText] = useState("");
   const [matches, setMatches] = useState(null);
+  const [reviewIndex, setReviewIndex] = useState(0);
   const [matching, setMatching] = useState(false);
   const [matchError, setMatchError] = useState(null);
+
+  const [decisions, setDecisions] = useState({});
+
+  useEffect(() => {
+    setDecisions(loadDecisions());
+  }, []);
 
   useEffect(() => {
     fetch(JOBS_URL)
@@ -38,11 +62,38 @@ export default function JobMatcher() {
       });
   }, []);
 
+  const recordDecision = (decision) => {
+    const current = matches && matches[reviewIndex];
+    if (!current) return;
+    const updated = {
+      ...decisions,
+      [current.job.url]: {
+        decision,
+        title: current.job.title,
+        company: current.job.company,
+      },
+    };
+    setDecisions(updated);
+    localStorage.setItem(DECISIONS_KEY, JSON.stringify(updated));
+    setReviewIndex((i) => i + 1);
+  };
+
+  useEffect(() => {
+    function handleKey(e) {
+      if (!matches || reviewIndex >= matches.length) return;
+      if (e.key === "ArrowRight") recordDecision("saved");
+      if (e.key === "ArrowLeft") recordDecision("rejected");
+    }
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, [matches, reviewIndex, decisions]);
+
   const handleMatch = async () => {
     if (!resumeText.trim() || jobs.length === 0) return;
     setMatching(true);
     setMatchError(null);
     setMatches(null);
+    setReviewIndex(0);
     try {
       const scored = jobs.slice(0, MAX_JOBS_TO_SCORE);
       const jobList = scored
@@ -51,6 +102,21 @@ export default function JobMatcher() {
             `${i}: ${j.title} @ ${j.company}${j.location ? ", " + j.location : ""}\n${truncate(j.description, 200)}`
         )
         .join("\n\n");
+
+      const savedList = Object.values(decisions)
+        .filter((d) => d.decision === "saved")
+        .map((d) => `${d.title} at ${d.company}`);
+      const rejectedList = Object.values(decisions)
+        .filter((d) => d.decision === "rejected")
+        .map((d) => `${d.title} at ${d.company}`);
+
+      let feedback = "";
+      if (savedList.length) {
+        feedback += `\n\nRoles this candidate has previously saved, lean toward similar ones:\n${savedList.join("\n")}`;
+      }
+      if (rejectedList.length) {
+        feedback += `\n\nRoles this candidate has previously rejected, avoid similar ones:\n${rejectedList.join("\n")}`;
+      }
 
       const response = await fetch(WORKER_URL, {
         method: "POST",
@@ -64,6 +130,7 @@ export default function JobMatcher() {
               content:
                 'You match a candidate\'s resume against open job postings. Respond with ONLY a JSON object, no markdown fences, no preamble. Schema: {"matches": [{"index": number, "score": number, "reason": string}]}. Score is 0 to 100. Only include jobs that are a genuine fit, leave out weak matches rather than ranking everything, cap at 10 results, order by score descending.\n\nResume:\n' +
                 resumeText +
+                feedback +
                 "\n\nJob listings:\n" +
                 jobList,
             },
@@ -85,6 +152,9 @@ export default function JobMatcher() {
       setMatching(false);
     }
   };
+
+  const current = matches && matches[reviewIndex];
+  const savedCount = Object.values(decisions).filter((d) => d.decision === "saved").length;
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 p-6 md:p-10">
@@ -137,44 +207,69 @@ export default function JobMatcher() {
           )}
         </div>
 
-        {matches && (
-          <div className="space-y-3">
-            {matches.length === 0 && (
-              <p className="text-sm text-slate-500 py-8 text-center">
-                No strong matches in the current listings.
-              </p>
-            )}
-            {matches.map((m, i) => (
+        {matches && matches.length === 0 && (
+          <p className="text-sm text-slate-500 py-8 text-center">
+            No strong matches in the current listings.
+          </p>
+        )}
+
+        {matches && matches.length > 0 && current && (
+          <div>
+            <p className="text-xs text-slate-500 mb-3">
+              {reviewIndex + 1} of {matches.length}
+            </p>
+            <div className="bg-slate-900 border border-slate-800 rounded-lg p-6">
+              <div className="flex items-start justify-between gap-3">
+                <div>
+                  <div className="flex items-center gap-2">
+                    <Briefcase className="w-3.5 h-3.5 text-slate-500" />
+                    <h3 className="font-serif text-xl text-slate-50">{current.job.title}</h3>
+                  </div>
+                  <p className="text-sm text-slate-400 mt-0.5">
+                    {current.job.company}
+                    {current.job.location ? ` \u00b7 ${current.job.location}` : ""}
+                  </p>
+                </div>
+                <span className="relative shrink-0 text-xs font-medium text-slate-950 px-2 py-0.5">
+                  <span className="absolute inset-0 bg-amber-500 -skew-x-6 rounded-sm" />
+                  <span className="relative">{current.score}</span>
+                </span>
+              </div>
+              <p className="text-sm text-slate-300 mt-4">{current.reason}</p>
               <a
-                key={i}
-                href={m.job.url}
+                href={current.job.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block bg-slate-900 border border-slate-800 hover:border-slate-700 rounded-lg p-4 transition-colors"
+                className="inline-flex items-center gap-1.5 text-xs text-slate-500 hover:text-slate-300 mt-4"
               >
-                <div className="flex items-start justify-between gap-3">
-                  <div>
-                    <div className="flex items-center gap-2">
-                      <Briefcase className="w-3.5 h-3.5 text-slate-500" />
-                      <h3 className="font-serif text-lg text-slate-50">{m.job.title}</h3>
-                    </div>
-                    <p className="text-sm text-slate-400 mt-0.5">
-                      {m.job.company}
-                      {m.job.location ? ` \u00b7 ${m.job.location}` : ""}
-                    </p>
-                    <p className="text-sm text-slate-300 mt-2">{m.reason}</p>
-                  </div>
-                  <div className="flex flex-col items-end gap-1 shrink-0">
-                    <span className="relative text-xs font-medium text-slate-950 px-2 py-0.5">
-                      <span className="absolute inset-0 bg-amber-500 -skew-x-6 rounded-sm" />
-                      <span className="relative">{m.score}</span>
-                    </span>
-                    <ExternalLink className="w-3.5 h-3.5 text-slate-600" />
-                  </div>
-                </div>
+                View posting <ExternalLink className="w-3 h-3" />
               </a>
-            ))}
+            </div>
+
+            <div className="flex justify-between items-center mt-4">
+              <button
+                onClick={() => recordDecision("rejected")}
+                className="flex items-center gap-1.5 text-sm text-slate-400 hover:text-red-400 transition-colors"
+              >
+                <ChevronLeft className="w-4 h-4" />
+                Reject
+              </button>
+              <span className="text-xs text-slate-600">use \u2190 / \u2192</span>
+              <button
+                onClick={() => recordDecision("saved")}
+                className="flex items-center gap-1.5 text-sm text-slate-400 hover:text-emerald-400 transition-colors"
+              >
+                Save
+                <ChevronRight className="w-4 h-4" />
+              </button>
+            </div>
           </div>
+        )}
+
+        {matches && matches.length > 0 && !current && (
+          <p className="text-sm text-slate-500 py-8 text-center">
+            That's everything from this run. {savedCount} saved so far, check the Saved tab.
+          </p>
         )}
       </div>
     </div>
