@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-28T02:24:05.693Z",
+  "updatedAt": "2026-11-28T11:10:14.569Z",
   "jobs": [
     {
       "id": "greenhouse-8111530",
@@ -236,7 +236,7 @@
       "title": "Social Strategy Director - Creator, Brand & Creative Strategy",
       "company": "RecruitmentRevolution.com",
       "location": "London, UK",
-      "url": "https://www.adzuna.co.uk/jobs/land/ad/5978747983?se=PLJSx9Lq8RGv9tPyVxHZZA&utm_medium=api&utm_source=4b94ef62&v=B0DFD66DC10A51E359DF2E145483F3AA91C324BB",
+      "url": "https://www.adzuna.co.uk/jobs/land/ad/5978747983?se=nGzXRxzr8RG9irj35EcsaQ&utm_medium=api&utm_source=4b94ef62&v=B0DFD66DC10A51E359DF2E145483F3AA91C324BB",
       "description": "Social-First Agency | Consumer Brands | Cultural Intelligence | Organic & Paid Social | Strategic Leadership | New Business Social is your specialism. Culture is your inspiration. Strategy is your craft. You've built your career helping ambitious consumer brands find their place in culture, turning audience intelligence, creator insights and social behaviours into creative work that gets people talking. You've challenged briefs, inspired creative teams, influenced senior clients and helped win …",
       "source": "adzuna",
       "postedAt": "2026-11-25T18:59:46Z"
@@ -286,7 +286,7 @@
       "title": "Integrated Insights & Strategy Undergraduate",
       "company": "Pfizer",
       "location": "Walton On The Hill, Tadworth",
-      "url": "https://www.adzuna.co.uk/jobs/land/ad/5967322445?se=PLJSx9Lq8RGv9tPyVxHZZA&utm_medium=api&utm_source=4b94ef62&v=9A6389051721CC1ECE6B28AB62A708546A664034",
+      "url": "https://www.adzuna.co.uk/jobs/land/ad/5967322445?se=nGzXRxzr8RG9irj35EcsaQ&utm_medium=api&utm_source=4b94ef62&v=9A6389051721CC1ECE6B28AB62A708546A664034",
       "description": "Pfizer UK Undergraduate Programme 2027/2028 Integrated Insights & Strategy Undergraduate, UK IIS Job Description - UK Marketing Company Who can apply? Applicants must be completing a placement as part of a degree course at a UK University, either through Year in Industry/Industrial Placement or Gap Year. Please note that we will only consider candidates who have applied by completing the Pfizer Placement Application Form. Candidates who do not complete and attach the application form will NOT b…",
       "source": "adzuna",
       "postedAt": "2026-11-16T03:34:24Z"
@@ -306,7 +306,7 @@
       "title": "Commercial Planning Manager",
       "company": "Premier Foods",
       "location": "UK",
-      "url": "https://www.adzuna.co.uk/jobs/land/ad/5978022535?se=PLJSx9Lq8RGv9tPyVxHZZA&utm_medium=api&utm_source=4b94ef62&v=ECEAB2B10780FC2730BDDE8F023D594BB14E5AA5",
+      "url": "https://www.adzuna.co.uk/jobs/land/ad/5978022535?se=nGzXRxzr8RG9irj35EcsaQ&utm_medium=api&utm_source=4b94ef62&v=ECEAB2B10780FC2730BDDE8F023D594BB14E5AA5",
       "description": "Based - St Albans, AL1 2RE (Hybrid) Permanent, Full Time Join Premier Foods - where people, brands and purpose come together. Turn brand strategy into commercial growth Are you commercially minded, confident working across Sales and Marketing, and passionate about turning great brand plans into strong commercial results? We're looking for a Commercial Planning Manager to join our Sales team click apply for full job details",
       "source": "adzuna",
       "postedAt": "2026-11-25T07:20:16Z"
@@ -342,16 +342,6 @@
       "postedAt": "2026-11-24T07:27:58Z"
     },
     {
-      "id": "adzuna-5980481602",
-      "title": "Account Specialist - East Anglia (Immunology)",
-      "company": "AbbVie",
-      "location": "Cambridge, Cambridgeshire",
-      "url": "https://www.adzuna.co.uk/jobs/details/5980481602?utm_medium=api&utm_source=4b94ef62",
-      "description": "Job Description Be the direct contact for key stakeholders to communicate the value proposition; be the main executor of the infield brand strategy. Develop customer relationships whilst maximising opportunities based on strong account plans. Customer selling and relationship management; Drive Sales – Own the customer engagement for target HCPs across channels, to reflect customer preferences, leveraging available content and multiple engagement channels Develops SMART pre call objectives in li…",
-      "source": "adzuna",
-      "postedAt": "2026-11-27T07:30:51Z"
-    },
-    {
       "id": "adzuna-5973376721",
       "title": "Account Specialist - North Scotland (Dermatology)",
       "company": "AbbVie",
@@ -360,6 +350,16 @@
       "description": "Job Description Be the direct contact for key stakeholders to communicate the value proposition; be the main executor of the infield brand strategy. Develop customer relationships whilst maximising opportunities based on strong account plans. Customer selling and relationship management; Drive Sales – Own the customer engagement for target HCPs across channels, to reflect customer preferences, leveraging available content and multiple engagement channels Develops SMART pre call objectives in li…",
       "source": "adzuna",
       "postedAt": "2026-11-21T01:22:44Z"
+    },
+    {
+      "id": "adzuna-5980481602",
+      "title": "Account Specialist - East Anglia (Immunology)",
+      "company": "AbbVie",
+      "location": "Cambridge, Cambridgeshire",
+      "url": "https://www.adzuna.co.uk/jobs/details/5980481602?utm_medium=api&utm_source=4b94ef62",
+      "description": "Job Description Be the direct contact for key stakeholders to communicate the value proposition; be the main executor of the infield brand strategy. Develop customer relationships whilst maximising opportunities based on strong account plans. Customer selling and relationship management; Drive Sales – Own the customer engagement for target HCPs across channels, to reflect customer preferences, leveraging available content and multiple engagement channels Develops SMART pre call objectives in li…",
+      "source": "adzuna",
+      "postedAt": "2026-11-27T07:30:51Z"
     },
     {
       "id": "adzuna-5979792007",
@@ -420,6 +420,16 @@
       "description": "This role suits an analytical thinker who can turn consumer behavior and market trends into compelling brand strategies. What you will do Gather and analyze information to understand customer and market behavior Develop digital-first go-to-market plans for a brand portfolio in the Canadian market What they look for Experience in brand strategy or planning Strong analytical and insight-gathering skills Ability to collaborate with creative and account teams Knowledge of the healthcare or consumer…",
       "source": "adzuna",
       "postedAt": "2026-11-25T15:05:31Z"
+    },
+    {
+      "id": "adzuna-5980857578",
+      "title": "Director, Global Marketing",
+      "company": "Authentic Brands Group",
+      "location": "New York, Lincoln",
+      "url": "https://www.adzuna.co.uk/jobs/details/5980857578?utm_medium=api&utm_source=4b94ef62",
+      "description": "Owns brand marketing for pillar fashion brands, driving innovation through strategic planning and cross-functional collaboration. What you will do Set brand strategy and marketing plans with VP Global Marketing and Brand Management Oversee implementation of integrated marketing and retail initiatives Lead weekly marketing meetings with internal stakeholders What they look for Experience with brand strategy and marketing planning Ability to collaborate across multiple business units Skills in ma…",
+      "source": "adzuna",
+      "postedAt": "2026-11-27T14:59:58Z"
     },
     {
       "id": "adzuna-5978573396",
@@ -592,16 +602,6 @@
       "postedAt": "2026-11-03T02:33:56Z"
     },
     {
-      "id": "adzuna-5980841033",
-      "title": "Digital Brand Strategist",
-      "company": "MSQDX",
-      "location": "UK",
-      "url": "https://www.adzuna.co.uk/jobs/details/5980841033?utm_medium=api&utm_source=4b94ef62",
-      "description": "SUMMARY OF THE ROLE As a Digital Strategist (Brand) at MSQ DX, you will be the senior strategic partner to the Director of Global Brand Marketing at a key global client. You will shape the longer-term vision for brand-led growth and show clearly how brand activity drives measurable business results. Sitting within our Strategy & Consulting team, you will support the client’s Brand, Digital Experience, Product Marketing and Integrated Marketing teams, owning workstreams, solving client problems …",
-      "source": "adzuna",
-      "postedAt": "2026-11-27T14:39:55Z"
-    },
-    {
       "id": "adzuna-5978557629",
       "title": "Art Director, Consumer Creative Design",
       "company": "A&E Television Networks",
@@ -610,6 +610,16 @@
       "description": "Fits a creative leader who does well on translating brand strategy into scalable visual systems and managing cross-functional design projects. What you will do Develop and execute campaign creative, key art, and visual identity systems for various platforms. Lead design projects from planning through execution, ensuring alignment with brand standards and goals. Provide creative direction to agencies, photographers, and freelancers to maintain quality and consistency. Translate audience insights…",
       "source": "adzuna",
       "postedAt": "2026-11-25T15:03:32Z"
+    },
+    {
+      "id": "adzuna-5980841033",
+      "title": "Digital Brand Strategist",
+      "company": "MSQDX",
+      "location": "UK",
+      "url": "https://www.adzuna.co.uk/jobs/details/5980841033?utm_medium=api&utm_source=4b94ef62",
+      "description": "SUMMARY OF THE ROLE As a Digital Strategist (Brand) at MSQ DX, you will be the senior strategic partner to the Director of Global Brand Marketing at a key global client. You will shape the longer-term vision for brand-led growth and show clearly how brand activity drives measurable business results. Sitting within our Strategy & Consulting team, you will support the client’s Brand, Digital Experience, Product Marketing and Integrated Marketing teams, owning workstreams, solving client problems …",
+      "source": "adzuna",
+      "postedAt": "2026-11-27T14:39:55Z"
     },
     {
       "id": "adzuna-5957698137",
@@ -636,7 +646,7 @@
       "title": "Commercial Marketing Manager",
       "company": "Seven",
       "location": "Wiltshire, South West England",
-      "url": "https://www.adzuna.co.uk/jobs/land/ad/5972078287?se=PLJSx9Lq8RGv9tPyVxHZZA&utm_medium=api&utm_source=4b94ef62&v=6BA40A38875EE3F4029CDE134E4FA052D605D062",
+      "url": "https://www.adzuna.co.uk/jobs/land/ad/5972078287?se=nGzXRxzr8RG9irj35EcsaQ&utm_medium=api&utm_source=4b94ef62&v=6BA40A38875EE3F4029CDE134E4FA052D605D062",
       "description": "Our client: Established heritage food manufacturing business, with a fantastic reputation for taste and quality. Global presence, with a strong portfolio spanning both branded and partner brand offering. With ambitious growth targets, this hire will play a key role in business expansion over the coming years. Now seeking a dynamic Commercial Marketing Manager to deliver the supplier portfolio across export markets. The role: Responsible for driving the performance and growth of the supplier bra…",
       "source": "adzuna",
       "postedAt": "2026-11-19T20:39:56Z"
@@ -650,16 +660,6 @@
       "description": "As the Lead Brand Manager, you'll shape the vision, voice and future direction of the F&F brand, ensuring it remains a relevant, distinctive and must-shop fashion destination. Leading a team of Brand Managers and Brand Executives, you'll work closely with Marketing, Buying, Merchandising, Online and Creative teams to bring the brand to life across every customer touchpoint. Owning brand strategy end-to-end, you'll drive F&F's positioning, identity, tone of voice and brand health, while overseei…",
       "source": "adzuna",
       "postedAt": "2026-11-21T22:24:50Z"
-    },
-    {
-      "id": "adzuna-5978572237",
-      "title": "Principal Creative Designer, Brand Marketing",
-      "company": "Nordstrom Inc",
-      "location": "UK",
-      "url": "https://www.adzuna.co.uk/jobs/details/5978572237?utm_medium=api&utm_source=4b94ef62",
-      "description": "Suited to a strategic, conceptual designer who can work at scale and mentor others while staying hands-on. The job spans brand strategy, design systems and multi-channel execution. What you will do Develop and execute creative concepts that meet marketing goals and fit brand strategy Adapt master templates across digital channels and formats with speed and accuracy Work with marketing, brand, project management and creative teams Mentor junior designers and act as a thought leader on the team R…",
-      "source": "adzuna",
-      "postedAt": "2026-11-25T15:05:32Z"
     },
     {
       "id": "adzuna-5978557071",
@@ -726,7 +726,7 @@
       "title": "Consumer Insight & Experience Manager (Product / Marketing)",
       "company": "Cancer Research UK",
       "location": "Stratford, East London",
-      "url": "https://www.adzuna.co.uk/jobs/land/ad/4802483813?se=WInXx9Lq8RGdZ4VJeE2E6Q&utm_medium=api&utm_source=4b94ef62&v=4669EE185C518FE227B5529232F1200AD787E3F3",
+      "url": "https://www.adzuna.co.uk/jobs/land/ad/4802483813?se=MspbSBzr8RGXN8PcaxAAXQ&utm_medium=api&utm_source=4b94ef62&v=4669EE185C518FE227B5529232F1200AD787E3F3",
       "description": "CONSUMER INSIGHT & EXPERIENCE MANAGER (PRODUCT / MARKETING) Salary: £35,000 - £40,000 Reports to: Product and Marketing Insight Lead Department: Marketing, Fundraising & Engagement Location: Stratford, London. Office-based with high flexibility (1-2 days per week in the office). Employment type: Permanent Working hours: Full time 35 hours per week Closing date: Sunday 18 September 2022, 23:55 At Cancer Research UK, we exist to beat cancer. We are professionals with purpose, beating cancer every…",
       "source": "adzuna",
       "postedAt": "2024-07-31T14:58:21Z"
@@ -742,16 +742,6 @@
       "postedAt": "2026-11-03T16:15:10Z"
     },
     {
-      "id": "adzuna-5978556687",
-      "title": "Senior Manager, Marketing Strategy (International Travel)",
-      "company": "Visa Europe  GmbH",
-      "location": "UK",
-      "url": "https://www.adzuna.co.uk/jobs/details/5978556687?utm_medium=api&utm_source=4b94ef62",
-      "description": "The work involves translating consumer insights and market dynamics into actionable strategies for cross-border commerce. What you will do Develop marketing strategies for priority international travel corridors. Translate consumer insights and travel trends into strategic frameworks and creative briefs. Partner with regional marketing leads to optimize corridor-level strategies. Influence annual operating plans to ensure cross-border marketing alignment. What they look for Strong background in…",
-      "source": "adzuna",
-      "postedAt": "2026-11-25T15:03:26Z"
-    },
-    {
       "id": "adzuna-5832793936",
       "title": "Market Research Specialist - UK",
       "company": "Mercor",
@@ -760,6 +750,16 @@
       "description": "About the job Mercor connects elite creative and technical talent with leading AI research labs. Headquartered in San Francisco, our investors include Benchmark , General Catalyst , Peter Thiel , Adam D'Angelo , Larry Summers , and Jack Dorsey . Position: UK-Based Market Research & Market Entry Specialists Type: Contract Compensation: $130–$155/hour Location: Remote Role Responsibilities Create, review, and evaluate high-quality market research and strategy scenarios. Draw on experience in mark…",
       "source": "adzuna",
       "postedAt": "2026-08-08T02:56:52Z"
+    },
+    {
+      "id": "adzuna-5978556687",
+      "title": "Senior Manager, Marketing Strategy (International Travel)",
+      "company": "Visa Europe  GmbH",
+      "location": "UK",
+      "url": "https://www.adzuna.co.uk/jobs/details/5978556687?utm_medium=api&utm_source=4b94ef62",
+      "description": "The work involves translating consumer insights and market dynamics into actionable strategies for cross-border commerce. What you will do Develop marketing strategies for priority international travel corridors. Translate consumer insights and travel trends into strategic frameworks and creative briefs. Partner with regional marketing leads to optimize corridor-level strategies. Influence annual operating plans to ensure cross-border marketing alignment. What they look for Strong background in…",
+      "source": "adzuna",
+      "postedAt": "2026-11-25T15:03:26Z"
     },
     {
       "id": "adzuna-5978572052",
@@ -806,7 +806,7 @@
       "title": "Sales Manager",
       "company": "ABR Associates Ltd",
       "location": "London, UK",
-      "url": "https://www.adzuna.co.uk/jobs/land/ad/5977729477?se=WInXx9Lq8RGdZ4VJeE2E6Q&utm_medium=api&utm_source=4b94ef62&v=DCE22A776426A7F01AD044A595F62A1F5719A392",
+      "url": "https://www.adzuna.co.uk/jobs/land/ad/5977729477?se=MspbSBzr8RGXN8PcaxAAXQ&utm_medium=api&utm_source=4b94ef62&v=DCE22A776426A7F01AD044A595F62A1F5719A392",
       "description": "Sales Manager / Player Coach - FMCG & Consumer Insights Data London (Hybrid - 3 days in office) £60,000 - £80,000 Basic Salary (DOE) Uncapped Commission Realistic OTE: £110,000 - £130,000 | Excellent Benefits Are you a high-performing B2B sales leader who thrives on both leading teams and winning business yourself? This is an exciting opportunity to join one of the most respected and fast-growing companies within the consumer insights and data space. Working with globally recognised brands acr…",
       "source": "adzuna",
       "postedAt": "2026-11-25T02:55:46Z"
@@ -846,20 +846,10 @@
       "title": "Insights and Category Lead",
       "company": "Michael Page Marketing",
       "location": "Guildford, Surrey",
-      "url": "https://www.adzuna.co.uk/jobs/land/ad/5981108677?se=WInXx9Lq8RGdZ4VJeE2E6Q&utm_medium=api&utm_source=4b94ef62&v=C629C4E27A95E42EE26066AB5BF762E08C0A1442",
+      "url": "https://www.adzuna.co.uk/jobs/land/ad/5981108677?se=MspbSBzr8RGXN8PcaxAAXQ&utm_medium=api&utm_source=4b94ef62&v=C629C4E27A95E42EE26066AB5BF762E08C0A1442",
       "description": "An exciting opportunity for an experienced Insights professional to shape commercial decision-making through best-in-class shopper, consumer and market insights. This role combines deep analytical expertise with customer-facing influence, using data-led recommendations to drive growth across key retail partnerships. Client Details Our client is a well-established consumer goods business with a portfolio of market-leading brands and a strong presence across UK retail. They are looking to strengt…",
       "source": "adzuna",
       "postedAt": "2026-11-27T21:04:14Z"
-    },
-    {
-      "id": "adzuna-5980857219",
-      "title": "Vice President, Creative",
-      "company": "Purple",
-      "location": "UK",
-      "url": "https://www.adzuna.co.uk/jobs/details/5980857219?utm_medium=api&utm_source=4b94ef62",
-      "description": "The team works on delivering restorative comfort products through new design and marketing strategies. What you will do Set and evolve the company's creative vision Lead campaigns and product launches across channels Own the creative quality and direction Build and lead the internal creative team What they look for 15 years creative industry experience Skills in brand management and creative direction Experience with omnichannel campaign execution Ability to manage creative agencies and product…",
-      "source": "adzuna",
-      "postedAt": "2026-11-27T14:59:55Z"
     },
     {
       "id": "adzuna-5940536919",
@@ -870,6 +860,26 @@
       "description": "About Us Vinarchy. Redefining Wine. Established in 2025 following the merger of Accolade Wines and Pernod Ricard Winemakers, Vinarchy is an exceptional global wine company committed to redefining wine. Crafting extraordinary wines in Australia, New Zealand, Spain, Italy, South Africa, Chile and the United States, and sharing them in almost every corner of the world, we are relentlessly innovative, ambitious and imaginative at every stage from grape to glass. About the role The Senior Innovation…",
       "source": "adzuna",
       "postedAt": "2026-10-24T14:37:31Z"
+    },
+    {
+      "id": "adzuna-5981035082",
+      "title": "Insights and Category Lead",
+      "company": "Michael Page",
+      "location": "Ash Vale, Aldershot",
+      "url": "https://www.adzuna.co.uk/jobs/details/5981035082?utm_medium=api&utm_source=4b94ef62",
+      "description": "An exciting opportunity for an experienced Insights professional to shape commercial decision-making through best-in-class shopper, consumer and market insights. This role combines deep analytical expertise with customer-facing influence, using data-led recommendations to drive growth across key retail partnerships. Client Details Our client is a well-established consumer goods business with a portfolio of market-leading brands and a strong presence across UK retail. They are looking to strengt…",
+      "source": "adzuna",
+      "postedAt": "2026-11-27T19:05:19Z"
+    },
+    {
+      "id": "adzuna-5980857219",
+      "title": "Vice President, Creative",
+      "company": "Purple",
+      "location": "UK",
+      "url": "https://www.adzuna.co.uk/jobs/details/5980857219?utm_medium=api&utm_source=4b94ef62",
+      "description": "The team works on delivering restorative comfort products through new design and marketing strategies. What you will do Set and evolve the company's creative vision Lead campaigns and product launches across channels Own the creative quality and direction Build and lead the internal creative team What they look for 15 years creative industry experience Skills in brand management and creative direction Experience with omnichannel campaign execution Ability to manage creative agencies and product…",
+      "source": "adzuna",
+      "postedAt": "2026-11-27T14:59:55Z"
     },
     {
       "id": "adzuna-5978558956",
@@ -972,6 +982,36 @@
       "postedAt": "2026-11-25T15:03:25Z"
     },
     {
+      "id": "adzuna-5980857567",
+      "title": "Associate Director, Marketing Innovation Excellence",
+      "company": "Galderma Canada Inc.",
+      "location": "UK",
+      "url": "https://www.adzuna.co.uk/jobs/details/5980857567?utm_medium=api&utm_source=4b94ef62",
+      "description": "An experienced marketer who can translate innovation priorities into commercially successful launches. What you will do Translate consumer insights into differentiated positioning and launch narratives. Coordinate cross-functional teams for retailer sell-in and product availability. Track innovation business cases and drive cross-functional decisions. What they look for 8 years in marketing, brand management, or innovation in CPG, beauty, or skincare. Experience leading complex product launches…",
+      "source": "adzuna",
+      "postedAt": "2026-11-27T14:59:58Z"
+    },
+    {
+      "id": "adzuna-5891556492",
+      "title": "Innovation Manager",
+      "company": "Church & Dwight",
+      "location": "London, UK",
+      "url": "https://www.adzuna.co.uk/jobs/details/5891556492?utm_medium=api&utm_source=4b94ef62",
+      "description": "A collective energy and ambition. A place where you can make a real difference. We’re a company that genuinely cares about our people, our products, our consumers and the environment. Our unique, informal culture champions courage, determination and collaboration. Knowing we have an open and supportive team means each of us has the freedom to take responsibility and ownership. We have a shared passion to work hard, innovate and push boundaries. United by the belief that when we strive for growt…",
+      "source": "adzuna",
+      "postedAt": "2026-09-20T10:50:25Z"
+    },
+    {
+      "id": "adzuna-5743589617",
+      "title": "Senior Brand Manager",
+      "company": "Kraft Heinz",
+      "location": "London, UK",
+      "url": "https://www.adzuna.co.uk/jobs/details/5743589617?utm_medium=api&utm_source=4b94ef62",
+      "description": "Job Description About the Position We have an excellent opportunity available for a talented Marketer to join and make a difference at Kraft Heinz. The Senior Brand Manager position lies within the UKI business unit based in the Shard, London and is part of the Category team. You will be working in a high performing team, alongside peers always trying to reach the next level and you will have a lot of exposure to internal senior stakeholders as well as external agencies. In this role, together …",
+      "source": "adzuna",
+      "postedAt": "2026-05-28T16:21:50Z"
+    },
+    {
       "id": "adzuna-5978558536",
       "title": "Research Analyst, Sales Marketing",
       "company": "FOX",
@@ -1010,26 +1050,6 @@
       "description": "Fits a strategic leader who can drive brand narrative and commercial growth in a creative environment. The role involves managing a cross-functional team and coordinating with product, creative, and retail departments. What you will do Drive the product marketing roadmap for new launches. Lead brand campaigns and always-on strategy. Partner with product development to shape propositions. Manage the global marketing calendar and storytelling. Build product marketing frameworks and benchmarks. Wh…",
       "source": "adzuna",
       "postedAt": "2026-11-25T15:03:30Z"
-    },
-    {
-      "id": "adzuna-5891556492",
-      "title": "Innovation Manager",
-      "company": "Church & Dwight",
-      "location": "London, UK",
-      "url": "https://www.adzuna.co.uk/jobs/details/5891556492?utm_medium=api&utm_source=4b94ef62",
-      "description": "A collective energy and ambition. A place where you can make a real difference. We’re a company that genuinely cares about our people, our products, our consumers and the environment. Our unique, informal culture champions courage, determination and collaboration. Knowing we have an open and supportive team means each of us has the freedom to take responsibility and ownership. We have a shared passion to work hard, innovate and push boundaries. United by the belief that when we strive for growt…",
-      "source": "adzuna",
-      "postedAt": "2026-09-20T10:50:25Z"
-    },
-    {
-      "id": "adzuna-5743589617",
-      "title": "Senior Brand Manager",
-      "company": "Kraft Heinz",
-      "location": "London, UK",
-      "url": "https://www.adzuna.co.uk/jobs/details/5743589617?utm_medium=api&utm_source=4b94ef62",
-      "description": "Job Description About the Position We have an excellent opportunity available for a talented Marketer to join and make a difference at Kraft Heinz. The Senior Brand Manager position lies within the UKI business unit based in the Shard, London and is part of the Category team. You will be working in a high performing team, alongside peers always trying to reach the next level and you will have a lot of exposure to internal senior stakeholders as well as external agencies. In this role, together …",
-      "source": "adzuna",
-      "postedAt": "2026-05-28T16:21:50Z"
     },
     {
       "id": "adzuna-5921082488",
@@ -1106,7 +1126,7 @@
       "title": "Assistant Brand Manager",
       "company": "Michael Page",
       "location": "Berkshire, South East England",
-      "url": "https://www.adzuna.co.uk/jobs/land/ad/5971756761?se=WInXx9Lq8RGdZ4VJeE2E6Q&utm_medium=api&utm_source=4b94ef62&v=5C0DCDA9729360777F61ED2D9A0297C971377B72",
+      "url": "https://www.adzuna.co.uk/jobs/land/ad/5971756761?se=MspbSBzr8RGXN8PcaxAAXQ&utm_medium=api&utm_source=4b94ef62&v=5C0DCDA9729360777F61ED2D9A0297C971377B72",
       "description": "An exciting opportunity for an Assistant Brand Manager to join a leading FMCG organisation and support the delivery of ambitious growth plans across a well-established consumer brand. The role offers a broad mix of brand management, innovation and shopper marketing exposure, providing an excellent platform for career development. Client Details Our client is a leading consumer goods business with a portfolio of trusted products Description Support the development and execution of annual brand p…",
       "source": "adzuna",
       "postedAt": "2026-11-19T14:34:48Z"
@@ -1116,7 +1136,7 @@
       "title": "Product Manager",
       "company": "Reed",
       "location": "UK",
-      "url": "https://www.adzuna.co.uk/jobs/land/ad/5978524790?se=WInXx9Lq8RGdZ4VJeE2E6Q&utm_medium=api&utm_source=4b94ef62&v=3B35108CCD6DA0E2230F8049BCFCF1A1499AFECD",
+      "url": "https://www.adzuna.co.uk/jobs/land/ad/5978524790?se=MspbSBzr8RGXN8PcaxAAXQ&utm_medium=api&utm_source=4b94ef62&v=3B35108CCD6DA0E2230F8049BCFCF1A1499AFECD",
       "description": "We are partnering with a well-established consumer products business seeking an ambitious Product Manager to support the development and delivery of market-leading product ranges. This is an excellent opportunity for someone with product development, category management or product marketing experience who wants greater ownership and exposure to strategic category planning. Working closely with senior stakeholders across Product, Creative, Commercial, Technical and Operations functions, you'll p…",
       "source": "adzuna",
       "postedAt": "2026-11-25T14:58:50Z"
@@ -1126,30 +1146,20 @@
       "title": "Assistant Category Manager",
       "company": "Reed",
       "location": "UK",
-      "url": "https://www.adzuna.co.uk/jobs/land/ad/5977566116?se=WInXx9Lq8RGdZ4VJeE2E6Q&utm_medium=api&utm_source=4b94ef62&v=A06760918DE20E02AE875EF088E15F610012D86D",
+      "url": "https://www.adzuna.co.uk/jobs/land/ad/5977566116?se=MspbSBzr8RGXN8PcaxAAXQ&utm_medium=api&utm_source=4b94ef62&v=A06760918DE20E02AE875EF088E15F610012D86D",
       "description": "We are partnering with a well-established consumer products business seeking an ambitious Product Manager to support the development and delivery of market-leading product ranges. This is an excellent opportunity for someone with product development, category management or product marketing experience who wants greater ownership and exposure to strategic category planning. Working closely with senior stakeholders across Product, Creative, Commercial, Technical and Operations functions, you'll p…",
       "source": "adzuna",
       "postedAt": "2026-11-24T21:00:13Z"
     },
     {
-      "id": "adzuna-4500003976",
-      "title": "Brand Management",
-      "company": "HostHelp",
-      "location": "UK",
-      "url": "https://www.adzuna.co.uk/jobs/details/4500003976?utm_medium=api&utm_source=4b94ef62",
-      "description": "Here at HostHelp, we only partner with hosting providers that we genuinely believe in. We only endorse and recommend hosting providers that have some of the best services and offer outstanding customer service to their customers. After a detailed evaluation of 30 leading hosting platforms, we narrowed it down to 3 resourceful options that fit in three different price ranges: economy, medium, and premium. You should check out our YouTube channel. It has all our research, including a list of the …",
+      "id": "adzuna-5980997338",
+      "title": "Innovation Consultant",
+      "company": "Club Connective",
+      "location": "Great Chesterford, Saffron Walden",
+      "url": "https://www.adzuna.co.uk/jobs/details/5980997338?utm_medium=api&utm_source=4b94ef62",
+      "description": "Innovation Consultant Location: Cambridge, Cambridgeshire (Hybrid Working Available) Salary: Competitive Bonus Benefits Job Type: Full-Time, Permanent Recruiter: Club Connective Recruitment (acting as an Employment Agency) Innovation Consultant - Strategy, Growth & Transformation Club Connective Recruitment is delighted to partner with a leading innovation consultancy in the Cambridge area to recruit an ambitious and commercially minded Innovation Consultant . This is a unique opportunity to …",
       "source": "adzuna",
-      "postedAt": "2023-12-28T17:21:10Z"
-    },
-    {
-      "id": "adzuna-5964294293",
-      "title": "Senior Product Manager \\u2014 Subscriptions (Freemium)",
-      "company": "Spotify",
-      "location": "UK",
-      "url": "https://www.adzuna.co.uk/jobs/details/5964294293?utm_medium=api&utm_source=4b94ef62",
-      "description": "Spotify's mission is to unlock the potential of human creativity by giving a million creative artists the opportunity to live off their art and billions of fans the chance to enjoy and be passionate about these creators. The Subscriptions Mission builds and evolves Spotify's subscription products and marketplace experiences to drive sustainable user and revenue growth globally. We focus on helping listeners discover, experience, and unlock the full value of Spotify through awareness, acquisitio…",
-      "source": "adzuna",
-      "postedAt": "2026-11-13T08:53:44Z"
+      "postedAt": "2026-11-27T17:24:21Z"
     },
     {
       "id": "adzuna-5962884599",
@@ -1256,7 +1266,7 @@
       "title": "Technology Innovation – Senior Consultant/Associate/Engagement Manager – London",
       "company": "Marsh McLennan",
       "location": "London, UK",
-      "url": "https://www.adzuna.co.uk/jobs/land/ad/5877265099?se=1uxKyNLq8RGQZJ90uxsobg&utm_medium=api&utm_source=4b94ef62&v=7A20150A9647CDD95C93F780CE3D618BF12691EA",
+      "url": "https://www.adzuna.co.uk/jobs/land/ad/5877265099?se=clXgSBzr8RGdZ4VJeE2E6Q&utm_medium=api&utm_source=4b94ef62&v=7A20150A9647CDD95C93F780CE3D618BF12691EA",
       "description": "Company: Oliver Wyman Description: WHO WE ARE At Oliver Wyman, a Marsh (NYSE: MRSH) business, we bring deep industry insight, bold innovation, and a collaborative approach that cuts through complexity to help organizations navigate their most defining transformative moments. As a business of Marsh, we work alongside the world’s leading experts across risk, reinsurance and capital, people and investments, and management consulting. Together with Marsh Risk, Guy Carpenter, and Mercer, we help org…",
       "source": "adzuna",
       "postedAt": "2026-09-09T16:49:05Z"
@@ -1286,10 +1296,20 @@
       "title": "Technical Lead",
       "company": "Anson Mccade",
       "location": "UK",
-      "url": "https://www.adzuna.co.uk/jobs/land/ad/5970713584?se=1uxKyNLq8RGQZJ90uxsobg&utm_medium=api&utm_source=4b94ef62&v=7706E28FF98D6E68ACB3A80120608EE0E199182C",
+      "url": "https://www.adzuna.co.uk/jobs/land/ad/5970713584?se=clXgSBzr8RGdZ4VJeE2E6Q&utm_medium=api&utm_source=4b94ef62&v=7706E28FF98D6E68ACB3A80120608EE0E199182C",
       "description": "Technical Lead - Digital & Technology Consulting A leading global innovation and transformation consultancy is looking for an experienced Technical Lead to join its growing technology practice. This role suits someone who enjoys solving complex problems, leading engineering teams, and delivering high-impact digital solutions across diverse industries click apply for full job details",
       "source": "adzuna",
       "postedAt": "2026-11-18T19:33:42Z"
+    },
+    {
+      "id": "adzuna-5981342328",
+      "title": "Strategic Partnership Lead",
+      "company": "Does Recruitment",
+      "location": "London, UK",
+      "url": "https://www.adzuna.co.uk/jobs/details/5981342328?utm_medium=api&utm_source=4b94ef62",
+      "description": "Strategic Partnerships Lead London, UK · Hybrid · Permanent or freelance · Permanent salary up to £85,000 per year · Freelance day rate to be agreed Does Recruitment is recruiting a Strategic Partnerships Lead on behalf of an innovation consultancy. You'll join a small team working with a multinational industrial client to develop new commercial partnerships across energy, mobility and infrastructure. Working alongside the account director, you'll identify customer problems that the client and …",
+      "source": "adzuna",
+      "postedAt": "2026-11-28T04:50:16Z"
     },
     {
       "id": "adzuna-5978577059",
@@ -1316,7 +1336,7 @@
       "title": "Data Engineer",
       "company": "Hexwired Recruitment Limited",
       "location": "Englefield, Reading",
-      "url": "https://www.adzuna.co.uk/jobs/land/ad/5973185638?se=1uxKyNLq8RGQZJ90uxsobg&utm_medium=api&utm_source=4b94ef62&v=F93F780112E3C987295F2C89FD7692CEAB71E3BB",
+      "url": "https://www.adzuna.co.uk/jobs/land/ad/5973185638?se=clXgSBzr8RGdZ4VJeE2E6Q&utm_medium=api&utm_source=4b94ef62&v=F93F780112E3C987295F2C89FD7692CEAB71E3BB",
       "description": "Hexwired are recruiting for a highly innovative Consultancy based in Reading, now seeking a Data Engineer to design build and operate the company’s data capability for high level applications. The company are expanding due to the needs of their clients and are seeking a data engineer, who must be eligible for UK security clearance and ideally has previous experience working on distributed systems in production. Key skills: * Eligible for UK security clearance. * Proven experience with opensourc…",
       "source": "adzuna",
       "postedAt": "2026-11-20T18:29:06Z"
@@ -1342,34 +1362,24 @@
       "postedAt": "2026-11-18T19:49:40Z"
     },
     {
-      "id": "adzuna-5970678069",
-      "title": "Geotechnical Environmental Graduate",
-      "company": "SME Graduate Employment Ltd",
-      "location": "Ford, Aylesbury",
-      "url": "https://www.adzuna.co.uk/jobs/land/ad/5970678069?se=1uxKyNLq8RGQZJ90uxsobg&utm_medium=api&utm_source=4b94ef62&v=1D27EC2AFC5A8E18DDC5C76FD32156FE8AB24822",
-      "description": "Do you have a sense of adventure, and enjoy being out and about in nature? This is a great opportunity to develop your career in the geotechnical engineering sector. The business is an innovative consultancy that works on behalf of developers who are looking to build something. You’ll be investigating the land that is to be built upon: working on land surveys or underground utility surveys; using drill rigs to construct boreholes and water wells. And taking soil and water samples. A lot of the …",
-      "source": "adzuna",
-      "postedAt": "2026-11-18T18:23:17Z"
-    },
-    {
-      "id": "adzuna-5947236243",
-      "title": "Acoustic Consultant",
-      "company": "Aztrum",
-      "location": "UK",
-      "url": "https://www.adzuna.co.uk/jobs/land/ad/5947236243?se=1uxKyNLq8RGQZJ90uxsobg&utm_medium=api&utm_source=4b94ef62&v=61A819C63145207FC248DB42D8F5917441DF3E14",
-      "description": "Acoustic Consultant (Buildings) Location: Remote Salary: £40,000 - £50,000 DOE An established and forward-thinking consultancy is looking to appoint an Acoustic Consultant with a strong background in building acoustics. Based in the UK, this is an excellent opportunity for someone looking to take the next step in their career within a collaborative and design-led environment. The Opportunity You’ll be joining a dynamic team of acousticians working on a wide range of projects across the commerci…",
-      "source": "adzuna",
-      "postedAt": "2026-10-30T19:06:22Z"
-    },
-    {
       "id": "adzuna-5980049264",
       "title": "Graduate Geotechnical Environmental Consultant",
       "company": "SME Graduate Employment Ltd",
       "location": "Aylesbury, Buckinghamshire",
-      "url": "https://www.adzuna.co.uk/jobs/land/ad/5980049264?se=1uxKyNLq8RGQZJ90uxsobg&utm_medium=api&utm_source=4b94ef62&v=409764073086BF8841A2D5C0E7247D8EEE8ABFDA",
+      "url": "https://www.adzuna.co.uk/jobs/land/ad/5980049264?se=clXgSBzr8RGdZ4VJeE2E6Q&utm_medium=api&utm_source=4b94ef62&v=409764073086BF8841A2D5C0E7247D8EEE8ABFDA",
       "description": "Do you have a sense of adventure, and enjoy being out and about in nature? This is a great opportunity to develop your career in the geotechnical engineering sector. The business is an innovative consultancy that works on behalf of developers who are looking to build something. You’ll be investigating the land that is to be built upon: working on land surveys or underground utility surveys; using drill rigs to construct boreholes and water wells. And taking soil and water samples. A lot of the …",
       "source": "adzuna",
       "postedAt": "2026-11-26T20:59:44Z"
+    },
+    {
+      "id": "adzuna-5970678069",
+      "title": "Geotechnical Environmental Graduate",
+      "company": "SME Graduate Employment Ltd",
+      "location": "Ford, Aylesbury",
+      "url": "https://www.adzuna.co.uk/jobs/land/ad/5970678069?se=clXgSBzr8RGdZ4VJeE2E6Q&utm_medium=api&utm_source=4b94ef62&v=1D27EC2AFC5A8E18DDC5C76FD32156FE8AB24822",
+      "description": "Do you have a sense of adventure, and enjoy being out and about in nature? This is a great opportunity to develop your career in the geotechnical engineering sector. The business is an innovative consultancy that works on behalf of developers who are looking to build something. You’ll be investigating the land that is to be built upon: working on land surveys or underground utility surveys; using drill rigs to construct boreholes and water wells. And taking soil and water samples. A lot of the …",
+      "source": "adzuna",
+      "postedAt": "2026-11-18T18:23:17Z"
     },
     {
       "id": "adzuna-5727326181",
@@ -1416,20 +1426,10 @@
       "title": "Senior Data & AI Engineer",
       "company": "Tenth Revolution Group",
       "location": "London, UK",
-      "url": "https://www.adzuna.co.uk/jobs/land/ad/5954617035?se=1uxKyNLq8RGQZJ90uxsobg&utm_medium=api&utm_source=4b94ef62&v=E48740D933F44C91EAE7B4992CC627DF883CAEA8",
+      "url": "https://www.adzuna.co.uk/jobs/land/ad/5954617035?se=clXgSBzr8RGdZ4VJeE2E6Q&utm_medium=api&utm_source=4b94ef62&v=E48740D933F44C91EAE7B4992CC627DF883CAEA8",
       "description": "Senior Data & AI Engineer - London (Hybrid) - Up to £90,000 We are working with an innovative consultancy who are looking for a Senior Data and AI Engineer to help build and scale customer-facing data products powered by modern AI technologies. This is a product-driven role, where you would work between data engineering, product development and artificial intelligence, you'll transform complex data sets into valuable solutions that enable customers to make better decisions faster. Skills & Expe…",
       "source": "adzuna",
       "postedAt": "2026-11-05T18:23:20Z"
-    },
-    {
-      "id": "adzuna-5947757904",
-      "title": "Civils Technician",
-      "company": "Conrad Consulting",
-      "location": "Leicester, Leicestershire",
-      "url": "https://www.adzuna.co.uk/jobs/details/5947757904?utm_medium=api&utm_source=4b94ef62",
-      "description": "Civils Technician Leicester £40k-£50k DOE plus benefits An innovative, medium sized consultancy are looking for a Civils Technician for their Leicester office. The role offers great variation as they are multi-faceted and become engaged on projects of different sizes and type. These include commercial, residential and industrial projects. The Ideal Candidate: - at least 3 years' experience at a reputable firm - experience in working on drainage projects - highly proficient on AutoCAD - strong c…",
-      "source": "adzuna",
-      "postedAt": "2026-10-31T06:39:17Z"
     },
     {
       "id": "adzuna-5727330964",
@@ -1516,7 +1516,7 @@
       "title": "Computer Science Graduate - Systems Support / Consultancy.",
       "company": "Hawke Search",
       "location": "Canterbury, Kent",
-      "url": "https://www.adzuna.co.uk/jobs/land/ad/5980343338?se=1uxKyNLq8RGQZJ90uxsobg&utm_medium=api&utm_source=4b94ef62&v=E39D19C5EDD409C3A5E4F9417BFAB9B0BD84C282",
+      "url": "https://www.adzuna.co.uk/jobs/land/ad/5980343338?se=clXgSBzr8RGdZ4VJeE2E6Q&utm_medium=api&utm_source=4b94ef62&v=E39D19C5EDD409C3A5E4F9417BFAB9B0BD84C282",
       "description": "Launch Your Career in Technology Consulting with a Leading Professional Services Firm Location: Canterbury, Kent Position: Graduate IT Consultant / Systems Support Consultant Career Path: Technology Consulting | Systems Integration | Business Transformation Ready to Turn Your Computer Science Degree into an Exciting Career? An outstanding opportunity has arisen for an ambitious, tech-savvy graduate to join one of the South East's most respected and fastest-growing professional services firms. T…",
       "source": "adzuna",
       "postedAt": "2026-11-27T04:59:10Z"
@@ -1622,24 +1622,24 @@
       "postedAt": "2026-09-14T21:49:16Z"
     },
     {
-      "id": "adzuna-5937569953",
+      "id": "adzuna-5903986351",
       "title": "Technical Architect",
       "company": "Anson Mccade",
-      "location": "South East London, London",
-      "url": "https://www.adzuna.co.uk/jobs/details/5937569953?utm_medium=api&utm_source=4b94ef62",
+      "location": "Bristol, South West England",
+      "url": "https://www.adzuna.co.uk/jobs/details/5903986351?utm_medium=api&utm_source=4b94ef62",
       "description": "Technical Architect - Digital & Data Consulting A leading global innovation and transformation consultancy is hiring a Technical Architect to join its Digital & Data community. This role offers the chance to work on complex, high-impact programmes across multiple sectors, helping organisations turn strategy into scalable, real-world technology solutions. About the role: As a Technical Architect, you'll sit at the heart of delivery, shaping end-to-end solutions, setting architectural direction, …",
       "source": "adzuna",
-      "postedAt": "2026-10-22T08:26:02Z"
+      "postedAt": "2026-09-30T15:55:41Z"
     },
     {
-      "id": "adzuna-5937569954",
-      "title": "Technical Architect",
-      "company": "Anson Mccade",
-      "location": "Manchester, Greater Manchester",
-      "url": "https://www.adzuna.co.uk/jobs/details/5937569954?utm_medium=api&utm_source=4b94ef62",
-      "description": "Technical Architect - Digital & Data Consulting A leading global innovation and transformation consultancy is hiring a Technical Architect to join its Digital & Data community. This role offers the chance to work on complex, high-impact programmes across multiple sectors, helping organisations turn strategy into scalable, real-world technology solutions. About the role: As a Technical Architect, you'll sit at the heart of delivery, shaping end-to-end solutions, setting architectural direction, …",
+      "id": "adzuna-5951473476",
+      "title": "Structural Revit Technician",
+      "company": "ALDWYCH CONSULTING LTD",
+      "location": "St Paul's, Central London",
+      "url": "https://www.adzuna.co.uk/jobs/details/5951473476?utm_medium=api&utm_source=4b94ef62",
+      "description": "Structural Technician London EC2 £42k-£52k A Structural Technician is required to join this dynamic team of elite level Consulting Engineers. Innovative design and excellence in engineering are key to the ethos of the practice. The company have over 50 staff and are proud of their high standards. They work on challenging and complex buildings projects, often involving large RC frame buildings of up to £150m in value. Experience of working on large RC frame buildings in the commercial and reside…",
       "source": "adzuna",
-      "postedAt": "2026-10-22T08:26:02Z"
+      "postedAt": "2026-11-03T06:45:41Z"
     }
   ]
 }
